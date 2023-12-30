@@ -5,12 +5,12 @@ import {observer} from "mobx-react-lite";
 
 
 interface ICustomInput {
-    placeholder: string
-    type: string
-    onChange: ChangeEventHandler<HTMLInputElement> | undefined
-    onClickDelete: MouseEventHandler<HTMLButtonElement> | undefined
-    value: string | readonly string[] | number | undefined
-    className: string
+    placeholder?: string
+    type?: string
+    onChange?: ChangeEventHandler<HTMLInputElement> | undefined
+    onClickDelete?: MouseEventHandler<HTMLButtonElement> | undefined
+    value?: string | readonly string[] | number | undefined
+    className?: string
 }
 
 const CustomInput = ({

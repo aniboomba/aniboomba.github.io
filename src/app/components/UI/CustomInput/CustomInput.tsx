@@ -9,7 +9,7 @@ interface ICustomInput {
     type?: string
     onChange?: ChangeEventHandler<HTMLInputElement> | undefined
     onClickDelete?: MouseEventHandler<HTMLButtonElement> | undefined
-    value?: string | readonly string[] | number | undefined
+    value?: string
     className?: string
 }
 
@@ -26,7 +26,7 @@ const CustomInput = ({
                className="input"/>
         <div className='custom-input__btns'>
             {
-                value.toString().length > 0
+                value === ''
                 &&
                 <>
                     <button onClick={onClickDelete} className='custom-input__btn'>

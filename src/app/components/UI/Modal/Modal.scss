@@ -1,4 +1,9 @@
-.modal-box{
-  //padding: 6rem!important;
-  max-width: 76rem;
+.modal {
+  //opacity: 1;
+  background: rgba(43, 45, 51, 0.40);
+
+  &-box {
+    //padding: 6rem!important;
+    max-width: 76rem;
+  }
 }

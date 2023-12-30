@@ -7,7 +7,7 @@ import appStateStore from "@/app/lib/store/app-state-store";
 
 const FilterContent = () => {
     const onchangeCloseBtn = () => {
-        document.getElementById('my_modal_1').close()
+        appStateStore.setStateModal(false)
     }
     return (
         <div className='filter-content'>

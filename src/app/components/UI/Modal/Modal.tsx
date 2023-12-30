@@ -12,8 +12,8 @@ interface IModal {
 const Modal = ({title, children, className}: IModal) => {
     return (
         <>
-            <button className={`btn btn-ghost ${className}`} onClick={()=>document.getElementById('my_modal_1').showModal()}>{title}</button>
-            <dialog id="my_modal_1" className="modal">
+            <button className={`btn btn-ghost ${className}`} onClick={()=>appStateStore.setStateModal(true)}>{title}</button>
+            <dialog open={appStateStore.stateModal}  className="modal">
                 <div className="modal-box">
                     {
                         children

@@ -1,0 +1,19 @@
+@use "../../../variables";
+.filter-content {
+
+  &__body{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 2rem;
+  }
+  &__btn{
+    margin-top: 2rem;
+    background-color: variables.$black;
+    color:white;
+  }
+  &__footer{
+    width: 100%;
+    text-align: end;
+  }
+}

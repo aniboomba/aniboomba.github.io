@@ -1,0 +1,29 @@
+@use '../../../variables';
+
+$height_input: 3.5rem;
+.custom-input {
+  height: $height_input;
+  min-height: $height_input;
+  background-color: white;
+  display: flex;
+  border-radius: variables.$border_radius_input;
+  box-shadow: variables.$box-shadow;
+
+  &__btn {
+    padding: .5rem 1rem;
+  }
+
+  &__btns {
+    display: flex;
+    padding: .3rem;
+  }
+
+  &__line {
+    display: block;
+    margin-top: .4rem;
+    height: 70%;
+    border-left: 1px solid rgb(218, 220, 224);
+
+  }
+
+}

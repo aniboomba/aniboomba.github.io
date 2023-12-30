@@ -1,0 +1,11 @@
+$margin-left: 1rem;
+.search {
+  margin-left: $margin-left;
+  min-width: 47.3rem !important;
+  display: flex;
+  align-items: center;
+
+  &__btn-search {
+    margin-left: $margin-left;
+  }
+}

@@ -7,17 +7,23 @@ import appStateStore from "@/app/lib/store/app-state-store";
 
 const FilterContent = () => {
     const onchangeCloseBtn = () => {
-        appStateStore.setStateModal(false)
+        document.getElementById('my_modal_1').close()
     }
     return (
         <div className='filter-content'>
             <div className='filter-content__body'>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
-                <CustomInput className=' filter-content__input' value={'dsdsd'}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
+                <CustomInput className='filter-content__input'   value={appStateStore.inputValue}
+                             onChange={(event) => appStateStore.setInputValue(event.target.value)}/>
             </div>
             <div className='filter-content__footer'>
                 <Button onClick={onchangeCloseBtn} className='mr-4'>

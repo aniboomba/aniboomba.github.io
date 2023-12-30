@@ -11,8 +11,8 @@ import FilterContent from "@/app/components/Search/FilterContent/FilterContent";
 const Search = () => (
     <div className='search'>
         <CustomInput
-            value={appStateStore.inputValue}
             onClickDelete={() => appStateStore.setInputValue('')}
+            value={appStateStore.inputValue}
             onChange={(event) => appStateStore.setInputValue(event.target.value)}
         />
         <Modal

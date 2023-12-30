@@ -12,16 +12,14 @@ interface IModal {
 const Modal = ({title, children, className}: IModal) => {
     return (
         <>
-            <label htmlFor="my_modal_7" onClick={()=>appStateStore.setStateModal(true)} className={`btn btn-ghost ${className}`}>{title}</label>
-            <input value="coding" type="checkbox" onChange={()=>appStateStore.stateModal} checked={appStateStore.stateModal} className="modal-toggle"/>
-            <div className="modal " role="dialog">
+            <button className={`btn btn-ghost ${className}`} onClick={()=>document.getElementById('my_modal_1').showModal()}>{title}</button>
+            <dialog id="my_modal_1" className="modal">
                 <div className="modal-box">
-
                     {
                         children
                     }
                 </div>
-            </div>
+            </dialog>
         </>
     );
 };

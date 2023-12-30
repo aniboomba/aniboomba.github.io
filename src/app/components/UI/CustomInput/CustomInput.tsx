@@ -1,7 +1,17 @@
-import React, {ClassAttributes} from 'react';
+import React, {ChangeEventHandler, MouseEventHandler} from 'react';
 import './CustomInput.scss'
 import Icons from "@/app/generic/Icons/Icons";
 import {observer} from "mobx-react-lite";
+
+
+interface ICustomInput {
+    placeholder: string
+    type: string
+    onChange: ChangeEventHandler<HTMLInputElement> | undefined
+    onClickDelete: MouseEventHandler<HTMLButtonElement> | undefined
+    value: string | readonly string[] | number | undefined
+    className: string
+}
 
 const CustomInput = ({
                          placeholder,
@@ -9,8 +19,8 @@ const CustomInput = ({
                          onChange,
                          value,
                          onClickDelete,
-    className
-                     }: ClassAttributes<HTMLInputElement> & React.InputHTMLAttributes<HTMLInputElement>) => (
+                         className
+                     }: ICustomInput) => (
     <div className={`custom-input input-bordered w-full ${className}`}>
         <input type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange} value={value}
                className="input"/>

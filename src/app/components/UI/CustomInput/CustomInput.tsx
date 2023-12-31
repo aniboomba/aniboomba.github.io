@@ -21,12 +21,12 @@ const CustomInput = ({
                          onClickDelete,
                          className
                      }: ICustomInput) => (
-    <div className={`custom-input input-bordered w-full ${className}`}>
+    <div className={`custom-input  w-full ${className}`}>
         <input type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange} value={value}
                className="input"/>
         <div className='custom-input__btns'>
             {
-                value === ''
+                value !== ''
                 &&
                 <>
                     <button onClick={onClickDelete} className='custom-input__btn'>

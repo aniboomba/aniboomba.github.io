@@ -20,7 +20,7 @@ interface ILayout {
 
 export default function RootLayout({children}: ILayout) {
     return (
-        <html lang="ru" data-lt-installed={true}>
+        <html lang="ru" data-lt-installed={true} data-theme="light">
         <body className={rubik.className}>
         <HeaderApp/>
         {children}

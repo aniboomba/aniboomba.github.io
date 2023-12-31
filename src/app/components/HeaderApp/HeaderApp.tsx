@@ -40,7 +40,7 @@ const HeaderApp = () => {
                 <Link href={'/page/setting'} className='btn no-animation btn-ghost'>
                     {icons.cog_6_tooth}
                 </Link>
-                <Button className='btn header-app__btn'>
+                <Button className=' header-app__btn'>
                     Войти
                 </Button>
             </div>

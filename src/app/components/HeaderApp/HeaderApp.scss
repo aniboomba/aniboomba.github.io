@@ -17,7 +17,7 @@
 
   &__btn {
     background-color: color.$blue !important;
-    color: white;
+    color: white!important;
 
     &:hover {
       background-color: color.$blue_hover !important;

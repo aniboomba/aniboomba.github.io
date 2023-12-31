@@ -1,18 +1,21 @@
 @use "../../../variables";
+
 .filter-content {
 
-  &__body{
+  &__body {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
     gap: 2rem;
   }
-  &__btn{
+
+  &__btn {
     margin-top: 2rem;
-    background-color: variables.$black;
-    color:white;
+    background-color: variables.$black !important;
+    color: white !important;
   }
-  &__footer{
+
+  &__footer {
     width: 100%;
     text-align: end;
   }

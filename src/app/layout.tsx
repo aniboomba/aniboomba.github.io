@@ -4,7 +4,8 @@ import './globals.scss'
 import './_variables.scss'
 import './_color.scss'
 import {ReactNode} from "react";
-import HeaderApp from "@/app/components/HeaderApp/HeaderApp";
+import HeaderApp from "@/app/components/UI/HeaderApp/HeaderApp";
+import BottomApp from "@/app/components/UI/BottomApp/BottomApp";
 
 const rubik = Rubik({subsets: ['latin']})
 
@@ -23,7 +24,10 @@ export default function RootLayout({children}: ILayout) {
         <html lang="ru" data-lt-installed={true} data-theme="light">
         <body className={rubik.className}>
         <HeaderApp/>
-        {children}
+        <div className='layout__container'>
+            {children}
+        </div>
+        <BottomApp/>
         </body>
         </html>
     )

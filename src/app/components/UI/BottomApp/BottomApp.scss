@@ -1,0 +1,11 @@
+@use "../../../color";
+
+.btm-nav {
+  background-color: color.$bg_color !important;
+}
+
+@media (min-width: 1024px) {
+  .bottom-app {
+    display: none !important;
+  }
+}

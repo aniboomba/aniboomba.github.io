@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const Setting = () => {
     return (
         <div>
-            Настройки
+            Вкладка "настройки" в разработке
         </div>
     );
 };

@@ -3,7 +3,7 @@
 $height_input: 3.5rem;
 .custom-input {
   height: $height_input;
-  min-height: $height_input;
+  width: 100%;
   background-color: white;
   display: flex;
   border-radius: variables.$border_radius_input;

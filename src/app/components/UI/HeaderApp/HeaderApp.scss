@@ -1,0 +1,62 @@
+@use "../../../color";
+
+.header-app {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: #FBFBFB !important;
+  padding: 1rem 1rem 1rem 1rem;
+  &__web {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+  }
+
+  &__logo {
+    color: color.$blue !important;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+
+  &__btn {
+    background-color: color.$blue !important;
+    color: white !important;
+
+    &:hover {
+      background-color: color.$blue_hover !important;
+    }
+  }
+
+  &__part {
+    &-search {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      max-width: 58rem;
+      min-height: 3.5rem;
+    }
+
+    &-control {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-app {
+    &__web {
+      display: none !important;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .header-app {
+    &__mob {
+      display: none !important;
+    }
+  }
+}

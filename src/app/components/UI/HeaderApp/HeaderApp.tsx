@@ -6,10 +6,8 @@ import Link from "next/link";
 import icons from "@/app/generic/Icons/Icons";
 import {Button} from "@/app/components/UI/Button/Button";
 import {usePathname} from "next/navigation";
-import {Rubik} from "next/font/google";
-import {className} from "postcss-selector-parser";
 
-const rubik = Rubik({weight: ['900']})
+
 const HeaderApp = () => {
     const pathname = usePathname()
     const activeSearch = ['/']
@@ -21,7 +19,7 @@ const HeaderApp = () => {
         <div className='header-app'>
             <div className='header-app__web'>
                 <div className='header-app__part-search'>
-                    <Link href={'/'} className={`header-app__logo ${rubik.className}`}>
+                    <Link href={'/'} className={`header-app__logo`}>
                         Zaeboomba
                     </Link>
                     {

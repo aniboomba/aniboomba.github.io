@@ -10,7 +10,7 @@ interface ICustomInput {
     onChange?: ChangeEventHandler<HTMLInputElement> | undefined
     value?: string
     className?: string
-    btn: any,
+    btn?: any,
     name:string
 }
 

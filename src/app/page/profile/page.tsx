@@ -1,9 +1,10 @@
 import React from 'react';
+import PageProfile from "@/app/components/pages/PageProfile/PageProfile";
 
 const Profile = () => {
     return (
-        <div>
-            Вкладка "профиль" в разработке
+        <div className='animate layout__container'>
+         <PageProfile/>
         </div>
     );
 };

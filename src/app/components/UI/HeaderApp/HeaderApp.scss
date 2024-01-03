@@ -14,13 +14,6 @@
 
   }
 
-  &__logo {
-    color: color.$blue !important;
-    font-size: 1.2rem;
-    margin-right: 1rem;
-    font-weight: 900;
-  }
-
   &__btn {
     background-color: color.$blue !important;
     color: white !important;
@@ -46,7 +39,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   .header-app {
     &__web {
       display: none !important;
@@ -54,7 +47,7 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   .header-app {
     &__mob {
       display: none !important;

@@ -4,45 +4,37 @@ import './HeaderApp.scss'
 import Search from "@/app/components/Search/Search";
 import Link from "next/link";
 import icons from "@/app/generic/Icons/Icons";
-import {Button} from "@/app/components/UI/Button/Button";
 import {usePathname} from "next/navigation";
+import Logo from "@/app/components/UI/Logo/Logo";
 
 
 const HeaderApp = () => {
     const pathname = usePathname()
     const activeSearch = ['/']
-    useEffect(() => {
-
-    }, [])
+    const activeHeader = ['auth', 'login']
 
     return (
-        <div className='header-app'>
+
+        !activeHeader.includes(pathname.split('/')[2]) &&
+        <div className='header-app animate'>
             <div className='header-app__web'>
                 <div className='header-app__part-search'>
-                    <Link href={'/'} className={`header-app__logo`}>
-                        Zaeboomba
-                    </Link>
+                    <Logo/>
                     {
                         activeSearch.includes(pathname) && <Search/>
                     }
 
                 </div>
                 <div className='header-app__part-control'>
-                    <div className="dropdown dropdown-end">
-                        <div tabIndex={0} role="button"
-                             className="btn no-animation btn-ghost m-1">{icons.squares_2x2}</div>
-                        <ul tabIndex={0}
-                            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
-                        </ul>
-                    </div>
+                    <Link href={'/page/tabs'} className='btn no-animation btn-ghost'>
+                        {icons.squares_2x2}
+                    </Link>
                     <Link href={'/page/setting'} className='btn no-animation btn-ghost'>
                         {icons.cog_6_tooth}
                     </Link>
-                    <Button className=' header-app__btn'>
+                    <Link href={'/page/auth'} className='btn no-animation header-app__btn'>
                         Войти
-                    </Button>
+                    </Link>
                 </div>
             </div>
             <div className='header-app__mob'>

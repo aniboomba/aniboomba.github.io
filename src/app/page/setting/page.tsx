@@ -1,5 +1,6 @@
 import React from 'react';
 import {Metadata} from "next";
+import PageSetting from "@/app/components/pages/PageSetting/PageSetting";
 
 export const metadata: Metadata = {
     title: 'Zaeboomba',
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 
 const Setting = () => {
     return (
-        <div>
-            Вкладка "настройки" в разработке
+        <div className='animate layout__container'>
+            <PageSetting/>
         </div>
     );
 };

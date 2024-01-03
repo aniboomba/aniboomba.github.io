@@ -1,0 +1,79 @@
+@use "../../../color";
+@use "../../../variables";
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  &__entry {
+    background-color: color.$black;
+    color: white;
+    margin-top: 1.625rem;
+    margin-bottom: 1rem;
+
+    &:hover {
+      background-color: color.$black__hover;
+    }
+  }
+  &__register{
+    margin-bottom: 5rem;
+  }
+
+  &__card {
+    position: relative;
+    max-width: 23.5rem;
+    border-radius: variables.$border-radius__card;
+    box-shadow: variables.$box-shadow;
+    background-color: white;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 4.313rem;
+  }
+
+  &__input {
+    width: 100% !important;
+    height: 3.375rem;
+    padding: 0 1rem;
+    border-radius: variables.$border-radius__input;
+    border: 2px solid color.$black;
+  }
+
+  &__tabs {
+    min-width: 16rem;
+    margin-bottom: 2.563rem;
+  }
+
+  &__footer {
+    margin-top: .7rem;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.tabs-boxed {
+  background-color: white;
+  border: 1px solid color.$gray;
+  border-radius: variables.$border-radius__btn;
+  padding: 0.188rem;
+}
+
+.tabs-boxed .tab-active:not(.tab-disabled):not([disabled]), .tabs-boxed :is(input:checked) {
+  background-color: color.$gray__light;
+  color: color.$black;
+
+  &:hover {
+    color: color.$black;
+  }
+}
+
+.tabs-boxed .tab {
+  height: 2.875rem;
+}

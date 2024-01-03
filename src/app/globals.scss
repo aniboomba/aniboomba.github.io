@@ -2,14 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 @import "variables";
+@import "color";
 html, body {
   color: $black !important;
   background-color: #FBFBFB !important;
-  scroll-behavior: smooth!important;
+  scroll-behavior: smooth !important;
 }
 
 * {
   scrollbar-color: $black white;
+
   &::-webkit-scrollbar {
     width: 18px;
     -webkit-appearance: none;
@@ -30,13 +32,19 @@ html, body {
 
 }
 
+.custom {
+  &__btn {
+    background-color: $black !important;
+    color: white !important;
+  }
+}
 
 .btn {
   height: 46px !important;
   min-height: 46px !important;
   border-radius: 10px;
   border: none;
-  padding: 0 2rem!important;
+  padding: 0 2rem !important;
 }
 
 .input {
@@ -45,34 +53,31 @@ html, body {
   outline-style: none !important;
   border: none;
 }
-.layout{
-  &__container{
+
+.layout {
+  &__container {
     padding-left: 11rem;
   }
 }
-.home {
-  &__item {
-    box-shadow: $box-shadow;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    max-width: 41rem;
 
-    border-radius: 10px;
-  }
-}
 
 .animate {
   opacity: 0;
-  animation: ani 1s forwards;
+  animation: ani .5s forwards;
 }
 
 @keyframes ani {
-  0% {opacity: 0;}
-  100% {opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 @media (max-width: 1024px) {
-  .layout{
-    &__container{
+  .layout {
+    &__container {
       padding: 1rem 1rem 5rem 1rem;
     }
   }

@@ -10,7 +10,7 @@ import BottomApp from "@/app/components/UI/BottomApp/BottomApp";
 const rubik = Rubik({subsets: ['latin']})
 
 export const metadata: Metadata = {
-    title: 'Zaeboomba',
+    title: 'Aniboomba',
     description: 'Сайт с аниме',
     icons: './zaeboomba_logo_min.svg'
 }
@@ -24,9 +24,7 @@ export default function RootLayout({children}: ILayout) {
         <html lang="ru" data-lt-installed={true} data-theme="light">
         <body className={rubik.className}>
         <HeaderApp/>
-        <div className='layout__container'>
             {children}
-        </div>
         <BottomApp/>
         </body>
         </html>

@@ -11,7 +11,7 @@ interface ICustomInput {
     value?: string
     className?: string
     btn?: any,
-    name:string
+    name?:string
 }
 
 const CustomInput = ({

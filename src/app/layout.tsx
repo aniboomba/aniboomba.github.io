@@ -1,4 +1,3 @@
-import type {Metadata} from 'next'
 import {Rubik} from 'next/font/google'
 import './globals.scss'
 import './_variables.scss'
@@ -9,11 +8,6 @@ import BottomApp from "@/app/components/UI/BottomApp/BottomApp";
 
 const rubik = Rubik({subsets: ['latin']})
 
-export const metadata: Metadata = {
-    title: 'Aniboomba',
-    description: 'Сайт с аниме',
-    icons: './zaeboomba_logo_min.svg'
-}
 
 interface ILayout {
     children: ReactNode

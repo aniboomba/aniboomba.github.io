@@ -8,9 +8,10 @@ interface ICustomInput {
     placeholder?: string
     type?: string
     onChange?: ChangeEventHandler<HTMLInputElement> | undefined
-    onClickDelete?: MouseEventHandler<HTMLButtonElement> | undefined
     value?: string
     className?: string
+    btn: any,
+    name:string
 }
 
 const CustomInput = ({
@@ -18,26 +19,15 @@ const CustomInput = ({
                          type,
                          onChange,
                          value,
-                         onClickDelete,
-                         className
+                         className,
+                         btn,
+    name
                      }: ICustomInput) => (
     <div className={`custom-input  w-full ${className}`}>
-        <input type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange} value={value}
+        <input name={name} type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange} value={value}
                className="input"/>
         <div className='custom-input__btns'>
-            {
-                value !== ''
-                &&
-                <>
-                    <button onClick={onClickDelete} className='custom-input__btn'>
-                        {Icons.x_mark}
-                    </button>
-                    <div className="custom-input__line"/>
-                </>
-            }
-            <button onClick={onClickDelete} className='custom-input__btn'>
-                {Icons.search}
-            </button>
+            {btn}
         </div>
     </div>
 )

@@ -5,7 +5,7 @@ import PageSetting from "@/app/components/pages/PageSetting/PageSetting";
 export const metadata: Metadata = {
     title: 'Zaeboomba',
     description: 'Сайт с аниме',
-    icons: './zaeboomba_logo_min.svg'
+    icons: 'logo_gorogoro.svg'
 }
 
 const Setting = () => {

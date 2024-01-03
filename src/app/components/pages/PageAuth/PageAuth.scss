@@ -24,7 +24,7 @@
 
   &__card {
     position: relative;
-    max-width: 23.5rem;
+    max-width: 23.625rem;
     border-radius: variables.$border-radius__card;
     box-shadow: variables.$box-shadow;
     background-color: white;
@@ -38,12 +38,25 @@
     margin-bottom: 4.313rem;
   }
 
-  &__input {
+  &__login {
     width: 100% !important;
     height: 3.375rem;
-    padding: 0 1rem;
+    padding-left: .2rem;
+    padding-right: 0!important;
+    display: flex;
+    align-items: center;
     border-radius: variables.$border-radius__input;
     border: 2px solid color.$black;
+  }
+  &__phone {
+    width: 100% !important;
+    height: 3.375rem;
+    padding-left: .2rem;
+    padding-right: 0!important;
+    border-radius: variables.$border-radius__input;
+    border: 2px solid color.$black;
+    display: flex;
+    align-items: center;
   }
 
   &__tabs {

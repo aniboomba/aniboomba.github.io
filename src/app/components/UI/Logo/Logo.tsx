@@ -7,7 +7,7 @@ interface ILogo {
 const Logo = ({className}:ILogo) => {
     return (
         <Link href={'/'} className={`logo ${className}`}>
-            Aniboomba
+            gorogoro
         </Link>
     );
 };

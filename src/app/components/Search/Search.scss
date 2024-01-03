@@ -1,9 +1,14 @@
+@use "../../variables";
 $margin-left: 1rem;
 .search {
 
   width: 100%;
   display: flex;
   align-items: center;
+
+  &__input {
+    box-shadow: variables.$box-shadow;
+  }
 
   &__btn-search {
     margin-left: $margin-left;

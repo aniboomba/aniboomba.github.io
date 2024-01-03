@@ -13,7 +13,6 @@ const Search = () => (
     <div className='search'>
         <CustomInput
             className='search__input'
-            onClickDelete={() => appStateStore.setInputValue('')}
             value={appStateStore.inputValue}
             onChange={(event) => appStateStore.setInputValue(event.target.value)}
             btn={

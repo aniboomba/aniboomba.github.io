@@ -1,0 +1,12 @@
+@use "variables";
+@use "color";
+@mixin auth_input{
+  width: 100% !important;
+  height: 3.375rem;
+
+  padding-right: 0!important;
+  border-radius: variables.$border-radius__input;
+  border: 2px solid color.$black;
+  display: flex;
+  align-items: center;
+}

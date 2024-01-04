@@ -1,6 +1,5 @@
-import React, {ChangeEventHandler, MouseEventHandler} from 'react';
+import React, {ChangeEventHandler, ReactNode} from 'react';
 import './CustomInput.scss'
-import Icons from "@/app/generic/Icons/Icons";
 import {observer} from "mobx-react-lite";
 
 
@@ -10,8 +9,9 @@ interface ICustomInput {
     onChange?: ChangeEventHandler<HTMLInputElement> | undefined
     value?: string
     className?: string
-    btn?: any,
-    name?:string
+    children?: ReactNode,
+    name?: string
+    frontChildren?: ReactNode
 }
 
 const CustomInput = ({
@@ -20,15 +20,16 @@ const CustomInput = ({
                          onChange,
                          value,
                          className,
-                         btn,
-    name
+                         children,
+                         name,
+                         frontChildren
                      }: ICustomInput) => (
     <div className={`custom-input  w-full ${className}`}>
-        <input name={name} type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange} value={value}
+        {frontChildren}
+        <input name={name} type={type} placeholder={placeholder ? placeholder : "Ввод текста"} onChange={onChange}
+               value={value}
                className="input"/>
-        <div className='custom-input__btns'>
-            {btn}
-        </div>
+        {children}
     </div>
 )
 

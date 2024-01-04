@@ -1,0 +1,8 @@
+@use "../../../../mixin";
+
+.input-login {
+  @include mixin.auth_input;
+  &__btn{
+    width: 3.625rem;
+  }
+}

@@ -7,10 +7,36 @@ import Logo from "@/app/components/UI/Logo/Logo";
 import {observer} from "mobx-react-lite";
 import {Button} from "@/app/components/UI/Button/Button";
 import authStateStore from "@/app/lib/store/auth-state-store";
-import CustomInput from "@/app/components/UI/CustomInput/CustomInput";
+import InputLogin from "@/app/components/pages/PageAuth/InputEmail/InputEmail";
+import InputPhone from "@/app/components/pages/PageAuth/InputPhone/InputPhone";
+import Toaster from "@/app/generic/Toaster/Toaster";
+import {toast} from "react-toastify";
 
 const PageAuth = () => {
     const changeStateTabs = (val: boolean) => authStateStore.setStateTabs(val)
+
+    const stateInput = {
+        true: <InputLogin/>,
+        false: <InputPhone/>
+    }
+
+    const onClickEntry = () => {
+        const regexPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
+        const regexEmail = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
+
+        if (authStateStore.stateTabs) {
+            if (!regexEmail.test(authStateStore.login)) {
+                return new Toaster({msg: 'Неправильно', type: toast.TYPE.WARNING})
+            }
+            console.log(1)
+        } else {
+            if (!regexPhone.test(authStateStore.phone)) {
+                return new Toaster({msg: 'Неправильно', type: toast.TYPE.WARNING})
+            }
+            console.log(2)
+        }
+    }
+
     return (
         <div className='auth'>
             <div className="auth__card">
@@ -19,7 +45,7 @@ const PageAuth = () => {
                         {icons.arrow_left}
                     </Link>
 
-                    <Logo className={'auth__logo'}/>
+                    <Logo className='auth__logo'/>
 
                     <div className='auth__body'>
                         <div role="tablist" className="tabs auth__tabs tabs-boxed">
@@ -28,30 +54,16 @@ const PageAuth = () => {
                             <a role="tab" onClick={() => changeStateTabs(false)}
                                className={`tab ${!authStateStore.stateTabs && "tab-active"}`}>Телефон</a>
                         </div>
-                        {
-                            authStateStore.stateTabs ?
-                                <CustomInput className='auth__login' type="email" name='email'
-                                             placeholder={'Логин или email'}
-                                             value={authStateStore.login}
-                                             onChange={(event) => authStateStore.setLogin(event.target.value)}
-                                             btn={<Button
-                                                 style={{width: '58px'}}
-                                                 onClick={() => authStateStore.setLogin('')}>{authStateStore.login.length !== 0 && icons.x_mark}</Button>}
-                                />
-                                :
-                                <CustomInput
-                                    placeholder={'Пароль'}
-                                    className='auth__phone'
-                                    type={authStateStore.btnPassActive ? "password" : "text"}
-                                    value={authStateStore.password}
-                                    onChange={(event) => authStateStore.setPassword(event.target.value)}
-                                    btn={<Button
-                                        style={{width: '58px'}}
-                                        onClick={() => authStateStore.setBtnPassActive(!authStateStore.btnPassActive)}>{authStateStore.btnPassActive ? icons.eye : icons.eye_slash}</Button>}/>
-                        }
 
-                        <Button className={'auth__entry w-full'}> Вход</Button>
-                        <Button className={'auth__register w-full'}> Зарегистрироваться</Button>
+                        {stateInput[authStateStore.stateTabs]}
+
+                        <Button onClick={onClickEntry} className='auth__entry'>
+                            Вход
+                        </Button>
+                        <Button className='auth__register'>
+                            Зарегистрироваться
+                        </Button>
+
                         <div className='w-full text-center text-sm'>
                             Войти с помощью
                         </div>

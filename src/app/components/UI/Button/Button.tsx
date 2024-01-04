@@ -9,9 +9,10 @@ export const Button = ({
                            onChange,
                            onClick,
                            className,
-style
+                           style
                        }: ClassAttributes<HTMLButtonElement> & React.ButtonHTMLAttributes<HTMLButtonElement> & IButton) => {
     return (
-        <button style={style} onChange={onChange} onClick={onClick} className={`${className} btn btn-ghost no-animation `}>{children}</button>
+        <button style={style} onChange={onChange} onClick={onClick}
+                className={`${className} btn btn-ghost no-animation `}>{children}</button>
     );
 };

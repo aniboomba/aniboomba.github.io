@@ -1,5 +1,6 @@
 @use "../../../color";
 @use "../../../variables";
+@use "../../../mixin";
 
 .auth {
   display: flex;
@@ -9,6 +10,7 @@
   height: 100vh;
 
   &__entry {
+    width: 100%;
     background-color: color.$black;
     color: white;
     margin-top: 1.625rem;
@@ -19,7 +21,16 @@
     }
   }
   &__register{
+    width: 100%;
     margin-bottom: 5rem;
+  }
+  &__logo{
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4.313rem;
   }
 
   &__card {
@@ -30,24 +41,6 @@
     background-color: white;
   }
 
-  &__logo {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-    margin-bottom: 4.313rem;
-  }
-
-  &__login {
-    width: 100% !important;
-    height: 3.375rem;
-    padding-left: .2rem;
-    padding-right: 0!important;
-    display: flex;
-    align-items: center;
-    border-radius: variables.$border-radius__input;
-    border: 2px solid color.$black;
-  }
   &__phone {
     width: 100% !important;
     height: 3.375rem;

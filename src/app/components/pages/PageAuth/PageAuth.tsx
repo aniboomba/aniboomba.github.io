@@ -56,7 +56,8 @@ const PageAuth = () => {
                                className={`tab ${!authStateStore.stateTabs && "tab-active"}`}>Телефон</a>
                         </div>
 
-                        {AuthInput}
+                        {authStateStore.stateTabs ? <InputLogin/> :
+                            <InputPhone/>}
 
                         <Button onClick={onClickEntry} className='auth__entry'>
                             Вход

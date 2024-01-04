@@ -15,10 +15,11 @@ import {toast} from "react-toastify";
 const PageAuth = () => {
     const changeStateTabs = (val: boolean) => authStateStore.setStateTabs(val)
 
-    const stateInput = {
+    const stateInput: any = {
         true: <InputLogin/>,
         false: <InputPhone/>
     }
+    const AuthInput: Element = stateInput[authStateStore.stateTabs]
 
     const onClickEntry = () => {
         const regexPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/
@@ -41,7 +42,7 @@ const PageAuth = () => {
         <div className='auth'>
             <div className="auth__card">
                 <div className='card-body'>
-                    <Link href={'/'} className='left-8 absolute'>
+                    <Link href={'/'} className='left-8 top-10 absolute'>
                         {icons.arrow_left}
                     </Link>
 
@@ -55,7 +56,7 @@ const PageAuth = () => {
                                className={`tab ${!authStateStore.stateTabs && "tab-active"}`}>Телефон</a>
                         </div>
 
-                        {stateInput[authStateStore.stateTabs]}
+                        {AuthInput}
 
                         <Button onClick={onClickEntry} className='auth__entry'>
                             Вход

@@ -15,26 +15,23 @@ const Search = () => (
             className='search__input'
             value={appStateStore.inputValue}
             onChange={(event) => appStateStore.setInputValue(event.target.value)}
-            btn={
-                <>
-                    <div className='flex item-center'>
-                        {
-                            appStateStore.inputValue !== ''
-                            &&
-                            <>
-                                <button onClick={() => appStateStore.setInputValue('')} className='custom-input__btn'>
-                                    {Icons.x_mark}
-                                </button>
-                                <div className="custom-input__line"/>
-                            </>
-                        }
+        >
+            <div className='flex item-center'>
+                {
+                    appStateStore.inputValue !== ''
+                    &&
+                    <>
                         <button onClick={() => appStateStore.setInputValue('')} className='custom-input__btn'>
-                            {Icons.search}
+                            {Icons.x_mark}
                         </button>
-                    </div>
-                </>
-            }
-        />
+                        <div className="custom-input__line"/>
+                    </>
+                }
+                <button onClick={() => appStateStore.setInputValue('')} className='custom-input__btn'>
+                    {Icons.search}
+                </button>
+            </div>
+        </CustomInput>
         <Modal
             className='ml-4'
             title={icons.filter}

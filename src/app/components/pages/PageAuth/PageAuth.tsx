@@ -14,12 +14,7 @@ import {toast} from "react-toastify";
 
 const PageAuth = () => {
     const changeStateTabs = (val: boolean) => authStateStore.setStateTabs(val)
-
-    const stateInput: any = {
-        true: <InputLogin/>,
-        false: <InputPhone/>
-    }
-    const AuthInput: Element = stateInput[authStateStore.stateTabs]
+    
 
     const onClickEntry = () => {
         const regexPhone = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/

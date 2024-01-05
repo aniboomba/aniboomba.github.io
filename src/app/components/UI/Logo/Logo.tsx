@@ -1,13 +1,13 @@
 import React from 'react';
 import Link from "next/link";
 import './Logo.scss'
-interface ILogo {
-    className?:string
-}
-const Logo = ({className}:ILogo) => {
+import Image from "next/image";
+
+
+const Logo = () => {
     return (
-        <Link href={'/'} className={`logo ${className}`}>
-            gorogoro
+        <Link href={'/'} className="logo">
+            <Image src={'/logo_gorogoro.svg'} width={100} height={100} alt={'gorogoro'} property={"true"} quality={95}/>
         </Link>
     );
 };

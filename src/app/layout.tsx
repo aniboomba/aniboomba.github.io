@@ -13,7 +13,7 @@ const rubik = Rubik({subsets: ['latin']})
 export const metadata: Metadata = {
     title: 'GOROGORO',
     description: 'Сайт с аниме',
-    icons: './Frame.svg'
+    icons: './logo_gorogoro.svg'
 }
 
 
@@ -27,7 +27,7 @@ export default function RootLayout({children}: ILayout) {
         <body className={rubik.className}>
         <ToastContainer/>
         <HeaderApp/>
-            {children}
+        {children}
         <BottomApp/>
         </body>
         </html>

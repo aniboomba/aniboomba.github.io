@@ -1,5 +1,5 @@
 "use client"
-import React, {useEffect} from 'react';
+import React from 'react';
 import './HeaderApp.scss'
 import Search from "@/app/components/Search/Search";
 import Link from "next/link";
@@ -11,7 +11,7 @@ import Logo from "@/app/components/UI/Logo/Logo";
 const HeaderApp = () => {
     const pathname = usePathname()
     const activeSearch = ['/']
-    const activeHeader = ['auth', 'login']
+    const activeHeader = ['auth', 'register']
 
     return (
 

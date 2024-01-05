@@ -27,7 +27,7 @@ const BottomApp = () => {
         {
             title: "Профиль",
             icon: icons.x_mark,
-            link: '/page/profile'
+            link: '/page/auth'
         },
     ]
 

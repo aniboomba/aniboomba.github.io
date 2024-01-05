@@ -10,7 +10,7 @@
     padding: 1rem;
     margin-bottom: 1rem;
     max-width: 41rem;
-
+    background-color: white;
     border-radius: 10px;
   }
 
@@ -37,10 +37,11 @@
     }
   }
 }
+
 @media (max-width: 767px) {
   .page-home {
     &__marketing {
-    display: none;
+      display: none;
     }
   }
 }

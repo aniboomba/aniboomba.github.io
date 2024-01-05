@@ -35,26 +35,15 @@ const PageAuth = () => {
                 Войти с помощью
             </div>
             <div className='auth__footer'>
-                <div className="avatar placeholder">
-                    <div className="bg-neutral text-neutral-content rounded-full w-12">
-                        <span>SY</span>
-                    </div>
-                </div>
-                <div className="avatar placeholder">
-                    <div className="bg-neutral text-neutral-content rounded-full w-12">
-                        <span>SY</span>
-                    </div>
-                </div>
-                <div className="avatar placeholder">
-                    <div className="bg-neutral text-neutral-content rounded-full w-12">
-                        <span>SY</span>
-                    </div>
-                </div>
-                <div className="avatar placeholder">
-                    <div className="bg-neutral text-neutral-content rounded-full w-12">
-                        <span>SY</span>
-                    </div>
-                </div>
+                {
+                    Array.from({length: 4}).map((_, index) => (
+                        <div className="avatar placeholder">
+                            <div className="bg-neutral text-neutral-content rounded-full w-12">
+                                <span>{index}</span>
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
 
         </FormLogAndRegister>

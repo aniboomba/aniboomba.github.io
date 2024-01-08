@@ -9,3 +9,7 @@
     display: none !important;
   }
 }
+
+.btm-nav > *:where(.active){
+  background-color: color.$bg_color;
+}

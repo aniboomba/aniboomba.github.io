@@ -12,14 +12,14 @@ interface IModal {
 const Modal = ({title, children, className}: IModal) => {
     return (
         <>
-            <button className={`btn btn-ghost ${className}`} onClick={()=>appStateStore.setStateModal(true)}>{title}</button>
-            <dialog open={appStateStore.stateModal}  className="modal">
-                <div className="modal-box">
-                    {
-                        children
-                    }
+            <button className={`btn ${className}`} onClick={() => appStateStore.setStateModal(true)}>{title}</button>
+
+            <input type="checkbox" className="modal-toggle" defaultChecked={appStateStore.stateModal}/>
+            <div className="modal" role="dialog">
+                <div className="modal-box max-w-5xl">
+                    {children}
                 </div>
-            </dialog>
+            </div>
         </>
     );
 };

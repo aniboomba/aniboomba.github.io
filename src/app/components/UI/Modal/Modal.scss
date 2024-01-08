@@ -1,9 +1,7 @@
-.modal {
-  //opacity: 1;
-  background: rgba(43, 45, 51, 0.40) !important;
+@use '../../../color';
 
+.modal {
   &-box {
-    //padding: 6rem!important;
-    max-width: 76rem;
+    background-color: color.$bg_color;
   }
 }

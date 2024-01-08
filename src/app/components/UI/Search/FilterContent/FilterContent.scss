@@ -1,0 +1,27 @@
+@use "../../../../color";
+@use "../../../../variables";
+
+.filter-content {
+
+  &__input {
+    border: 1px solid color.$gray;
+  }
+
+  &__body {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    gap: 2rem;
+  }
+
+  &__btn {
+    margin-top: 2rem;
+    background-color: color.$black !important;
+    color: white !important;
+  }
+
+  &__footer {
+    width: 100%;
+    text-align: end;
+  }
+}

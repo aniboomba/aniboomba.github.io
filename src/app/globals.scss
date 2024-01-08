@@ -1,8 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import "variables";
 @import "color";
+
+
 html, body {
   color: $black !important;
   background-color: #FBFBFB !important;
@@ -43,6 +46,8 @@ html, body {
 }
 
 .btn {
+  height: 46px !important;
+  min-height: 46px !important;
   &:focus-visible {
     outline-width: 0 !important;
   }

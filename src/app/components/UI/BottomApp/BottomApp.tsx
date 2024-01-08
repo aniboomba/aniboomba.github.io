@@ -20,13 +20,13 @@ const BottomApp = () => {
             link: '/page/tabs'
         },
         {
-            title: "Настройки",
-            icon: icons.cog_6_tooth,
-            link: '/page/setting'
+            title: "Закладки",
+            icon: icons.bookmark,
+            link: '/page/bookmarks'
         },
         {
             title: "Профиль",
-            icon: icons.x_mark,
+            icon: icons.user_circle,
             link: '/page/auth'
         },
     ]
